@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Guessing Game</title>
     <style>
         body {
@@ -11,10 +12,29 @@
         .hidden {
             display: none;
         }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+            min-width: 300px;
+            background-color: #f0f0f0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Word Guessing Game</h1>
+     <div class="container">
+    <h1>Word Guessing Game</h1>        
     <p id="wordDisplay">_ _ _ _ _ _ _</p>
     <p>Wrong guesses: <span id="wrongGuesses"></span></p>
     <input type="text" id="letterInput" maxlength="1">
@@ -72,7 +92,7 @@
                 document.getElementById('gameStatus').textContent = 'Game Over. The word was ' + word;
             }
         }
-
+    </div>
     </script>
 </body>
 </html>
