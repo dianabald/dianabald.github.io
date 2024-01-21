@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Guessing Game</title>
+    <title>Diana's Simple Word Guessing Game</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +12,7 @@
         .hidden {
             display: none;
         }
-        .container {
+                .container {
             width: 80%;
             margin: 0 auto;
             max-width: 1200px;
@@ -33,8 +33,8 @@
     </style>
 </head>
 <body>
-     <div class="container">
-    <h1>Word Guessing Game</h1>        
+    <div class="container">
+    <h1>Diana's Simple Word Guessing Game</h1>
     <p id="wordDisplay">_ _ _ _ _ _ _</p>
     <p>Wrong guesses: <span id="wrongGuesses"></span></p>
     <input type="text" id="letterInput" maxlength="1">
@@ -89,10 +89,10 @@
             if (!displayedWord.includes('_')) {
                 document.getElementById('gameStatus').textContent = 'Congratulations! You guessed the word!';
             } else if (remainingGuesses <= 0) {
-                document.getElementById('gameStatus').textContent = 'Game Over. The word was ' + word;
+                document.getElementById('gameStatus').textContent = 'Oops! Game Over. The word was ' + word;
             }
         }
-    </div>
+
     </script>
 </body>
 </html>
